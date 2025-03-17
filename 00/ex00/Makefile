@@ -10,7 +10,7 @@ $(NAME): $(OBJ)
 	c++ $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	c++ -c $< -o $@
+	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
