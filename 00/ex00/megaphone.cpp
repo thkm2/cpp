@@ -1,15 +1,16 @@
 #include <iostream>
-
-// mettre en uppercase
-// espace entre chaque arg
+#include <cctype>
 
 int main(int ac, char **av) {
 	if (ac < 2)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else {
-		int i = 1;
-		while (i < ac) {
-			std::cout << av[i++];
+		for (int i = 1; i < ac; i++) {
+			for (int c = 0; av[i][c]; c++)
+				av[i][c] = toupper(av[i][c]);
+			std::cout << av[i];
+			if (i != ac - 1)
+				std::cout << " ";
 		}
 		std::cout << std::endl;
 	}
