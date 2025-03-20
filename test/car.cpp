@@ -1,12 +1,11 @@
 #include "garage.hpp"
 
-Voiture::Voiture() : brand("inconnue"), model("inconnu"), hp(0), num(0) {}
+Voiture::Voiture() : brand("inconnue"), model("inconnu"), hp(0), num(-1) {}
 
-Voiture::Voiture(std::string nbrand, std::string nmodel, int nhp, int nnum) {
+Voiture::Voiture(std::string nbrand, std::string nmodel, int nhp) : num(0) {
 	brand = nbrand;
 	model = nmodel;
 	hp = nhp;
-	num = nnum;
 }
 
 Voiture::Voiture(Voiture &other) {
@@ -24,5 +23,13 @@ Voiture &Voiture::operator=(const Voiture &other) {
 }
 
 void Voiture::print_details() const {
-	std::cout << "- " << model << " de la marque " << brand << " et elle a " << hp << " chevaux, num : " << num << std::endl;
+	std::cout << num << ") - " << brand << " " << model << " de " << hp << " chevaux" << std::endl;
+}
+
+bool Voiture::is_exist() const {
+	return (num >= 0);
+}
+
+void Voiture::set_number(int n) {
+	num = n;
 }

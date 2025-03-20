@@ -2,19 +2,20 @@
 #define G_HPP
 
 #include <iostream>
+#include "car.hpp"
 
-class Voiture {
+class Garage {
 	private:
-		std::string brand;
-		std::string model;
-		int			hp;
-		int			num;
+		Voiture cars[8];
+		int		n_cars;
 	public:
-		Voiture();
-		Voiture(std::string nbrand, std::string nmodel, int nhp, int nnum);
-		Voiture(Voiture &other);
-		Voiture &Voiture::operator=(const Voiture &other);
-		void print_details() const;
+		Garage();
+		Garage(Voiture *new_cars, bool new_ncars);
+		Garage(const Garage &other);
+		Garage &operator=(const Garage &other);
+		void print_garage() const;
+		void add_car(Voiture &new_car);
+		void del_car(int num);
 };
 
 #endif
