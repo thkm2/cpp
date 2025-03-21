@@ -1,6 +1,7 @@
-#include <iostream>
+#include "../includes/Contact.hpp"
+#include "../includes/PhoneBook.hpp"
 
 int main() {
-	std::cout << "oui" << std::endl;
+	std::string s;
 	return (0);
 }
