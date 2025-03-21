@@ -3,4 +3,15 @@
 
 #include "Contact.hpp"
 
+class PhoneBook {
+	private:
+		Contact _contacts[8];
+		int		_nb_contact;
+	public:
+		PhoneBook();
+		void print_instructions() const;
+		void print() const;
+		void add_choice();
+};
+
 #endif

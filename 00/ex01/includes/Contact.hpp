@@ -4,6 +4,11 @@
 #include <iostream>
 #include <string>
 
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define RESET "\033[0m"
+
 class Contact {
 	private:
 		std::string _first_name;
@@ -13,26 +18,9 @@ class Contact {
 		std::string _darkest_secret;
 	public:
 		Contact();
-		Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret);
+		void set_infos();
+		void print() const;
 		~Contact();
 };
-
-Contact::Contact() : _first_name("inconnu"), _last_name("inconnu"), _nickname("inconnu"), _phone_number("inconnu"), _darkest_secret("inconnu") {}
-
-Contact::Contact(
-	std::string first_name, 
-	std::string last_name,
-	std::string nickname,
-	std::string phone_number,
-	std::string darkest_secret)
-	: _first_name(first_name),
-	_last_name(last_name),
-	_nickname(nickname),
-	_phone_number(phone_number),
-	_darkest_secret(darkest_secret) {}
-
-Contact::~Contact() {
-	std::cout << "Contact " << _first_name << _last_name << " supprimé" << std::endl;
-}
 
 #endif
