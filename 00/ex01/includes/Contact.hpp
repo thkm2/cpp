@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 #define RED "\033[31m"
 #define GREEN "\033[32m"
@@ -19,7 +20,8 @@ class Contact {
 	public:
 		Contact();
 		void set_infos();
-		void print() const;
+		void print_table(int i) const;
+		void print_info() const;
 		~Contact();
 };
 

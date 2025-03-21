@@ -7,6 +7,7 @@ class PhoneBook {
 	private:
 		Contact _contacts[8];
 		int		_nb_contact;
+		int 	_i_oldest;
 	public:
 		PhoneBook();
 		void print_instructions() const;
