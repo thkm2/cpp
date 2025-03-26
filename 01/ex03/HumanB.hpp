@@ -3,6 +3,8 @@
 
 #include "Weapon.hpp"
 
+#include <iostream>
+
 class HumanB {
 	private:
 		Weapon 		*_weapon;
