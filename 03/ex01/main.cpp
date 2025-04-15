@@ -1,12 +1,19 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include <iostream>
 
 int main() {
-	ClapTrap a("kim");
-	ClapTrap b("claude");
-	a.attack("claude");
-	b.takeDamage(7);
-	b.beRepaired(2);
-	a.attack("claude");
-	b.takeDamage(7);
-	return (0);
+	ScavTrap bob("Bob");
+
+	bob.guardGate();
+
+	for (int i = 0; i < 50; ++i)
+		bob.attack("Cible");
+
+	bob.attack("épuisé");
+
+	for (int i = 0; i < 100; ++i)
+		bob.takeDamage(1);
+	bob.attack("encore");
+
+	return 0;
 }
