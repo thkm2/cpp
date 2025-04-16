@@ -2,7 +2,8 @@ NAME = animal
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp 
+SRC_PATH = src/
+SRC = $(SRC_PATH)Animal.cpp  $(SRC_PATH)Cat.cpp  $(SRC_PATH)Dog.cpp  $(SRC_PATH)main.cpp  $(SRC_PATH)WrongAnimal.cpp  $(SRC_PATH)WrongCat.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
