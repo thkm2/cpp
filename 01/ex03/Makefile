@@ -2,7 +2,7 @@ NAME = weapon
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = ${wildcard *.cpp}
+SRC = HumanA.cpp  HumanB.cpp  main.cpp  Weapon.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

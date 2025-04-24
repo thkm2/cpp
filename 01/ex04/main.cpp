@@ -1,7 +1,7 @@
 #include "replace.hpp"
 
 int getFileIn(std::string filename, std::ifstream &fileIn) {
-	fileIn = std::ifstream(filename);
+	fileIn.open(filename.c_str());
 	if (!fileIn) {
 		std::cout << "Cannot open file" << std::endl;
 		return (1);
@@ -10,7 +10,7 @@ int getFileIn(std::string filename, std::ifstream &fileIn) {
 }
 
 int getFileOut(std::string filename, std::ofstream &fileOut) {
-	fileOut = std::ofstream(filename + ".replace");
+	fileOut.open((filename + ".replace").c_str());
 	if (!fileOut) {
 		std::cout << "Cannot open file" << std::endl;
 		return (1);

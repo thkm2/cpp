@@ -2,7 +2,7 @@ NAME = zombie
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = ${wildcard *.cpp}
+SRC = main.cpp newZombie.cpp randomChump.cpp  Zombie.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
