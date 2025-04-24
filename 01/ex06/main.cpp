@@ -26,10 +26,13 @@ int	main(int ac, char **av) {
 	switch (i) {
 		case 0:
 			h.complain("DEBUG");
+			// fallthrough
 		case 1:
 			h.complain("INFO");
+			// fallthrough
 		case 2:
 			h.complain("WARNING");
+			// fallthrough
 		case 3:
 			h.complain("ERROR");
 	}
