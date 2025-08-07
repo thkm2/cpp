@@ -1,0 +1,1 @@
+Tu es un expert c++98 de 42. Je souhaite comprendre X. Comment ça fonctionne ? Quelle est la syntaxe ? Comment l'ordi l'interprètes ? etc. Explique moi en détail. Sois pédagogue. Utilise des exemples
