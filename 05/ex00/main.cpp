@@ -7,16 +7,48 @@
 // si une méthode est virtual, toutes les méthodes enfant le sont aussi. Donc pas besoin de le spécifier, mais c'est plus clair
 
 int main() {
+	Bureaucrat bestGrade("Best", 1);
+	Bureaucrat worstGrade("Worst", 150);
+	Bureaucrat midGrade("mid", 42);
+
+	std::cout << "getName test : " << midGrade.getName() << std::endl;
+	std::cout << "getGrade test : " << midGrade.getGrade() << std::endl;
+
+	std::cout << midGrade << std::endl;
+	midGrade.decrementGrade();
+	midGrade.decrementGrade();
+	std::cout << midGrade << std::endl;
+	midGrade.incrementGrade();
+	std::cout << midGrade << std::endl;
+
+	Bureaucrat copied = worstGrade;
+	std::cout << copied << std::endl;
+
+	copied = bestGrade;
+	std::cout << copied << std::endl;
+
 	try {
-		Bureaucrat p("Pedro", 1);
-		std::cout << p << std::endl;
-		p.incrementGrade();
-		std::cout << p << std::endl;
+		Bureaucrat tooHigh("tooHigh", 0);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 
+	try {
+		Bureaucrat tooLow("tooLow", 151);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		bestGrade.incrementGrade();
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		worstGrade.decrementGrade();
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 	return (0);
 }
-
-// Faire un main qui test plus en détail !!!!!!
