@@ -22,7 +22,6 @@ AForm::AForm(const AForm &other) : _name(other._name),
 AForm &AForm::operator=(const AForm &other) {
 	if (this != &other) {
 		_isSigned = other._isSigned;
-		// _name = other._name; // etc pas possible car const
 	}
 	return (*this);
 }
