@@ -18,15 +18,15 @@ class Bureaucrat {
 		Bureaucrat &operator=(const Bureaucrat &other);
 		~Bureaucrat();
 
-		const std::string	&getName() const; // return un ref constante -> pas de copie sur un type lourd (std::string) + pas de possibilité d'edit
-		int					getGrade() const; // overkill de return un ref constante car la copie à quasi le meme poids
+		const std::string	&getName() const;
+		int					getGrade() const;
 
 		void incrementGrade();
 		void decrementGrade();
 
 		class GradeTooHighException: public std::exception {
 			public:
-				virtual const char *what() const throw(); // 'virtual' pas nécessaire -> pour indiquer que ça override
+				virtual const char *what() const throw();
 		};
 		class GradeTooLowException: public std::exception {
 			public:
@@ -34,6 +34,7 @@ class Bureaucrat {
 		};
 
 		void signForm(AForm &f) const;
+		void executeForm(AForm const & form) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b);
