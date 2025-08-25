@@ -3,6 +3,8 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
+#include <cstdlib>
+#include <ctime>
 
 int main() {
 	std::srand(time(NULL)); // rand() nb aléatoire et srand() change la séquence
