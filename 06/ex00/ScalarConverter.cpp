@@ -19,10 +19,10 @@ static void fromChar(char c) {
 		<<  static_cast<float>(c) << "f" << std::endl; // std::fixed sert à formater l'affichage des nb à virgule
 	std::cout << "double: " << static_cast<double>(c) << std::endl;
 }
-void fromFloat(float f) {
+static void fromFloat(float f) {
 	std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
 	std::cout << "int: " << static_cast<int>(f) << std::endl;
-	std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f" << std::endl;
+	std::cout << "float: " << f << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(f) << std::endl;
 }
 
