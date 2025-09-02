@@ -9,3 +9,6 @@ int main(int ac, char **av) {
 	ScalarConverter::convert(av[1]);
 	return 0;
 }
+
+// c'est quoi nan, inf, +/-inf, etc
+// comment fonctionne la fonction isInteger

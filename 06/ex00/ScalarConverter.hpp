@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip>
+#include <iomanip> // std::fixed() + setprecision
+#include <cmath> // std::isnan, std::isinf
+#include <climits> // INT_MIN, INT_MAX
 
 class ScalarConverter {
 	private:
