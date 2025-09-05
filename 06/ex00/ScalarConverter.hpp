@@ -4,8 +4,9 @@
 #include <iostream>
 #include <string>
 #include <iomanip> // std::fixed() + setprecision
-#include <cmath> // std::isnan, std::isinf
-#include <climits> // INT_MIN, INT_MAX
+#include <limits> // std::numeric_limits
+#include <cctype> // std::isprint
+#include <cstdlib> // std::atol
 
 class ScalarConverter {
 	private:

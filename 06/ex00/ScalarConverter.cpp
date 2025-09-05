@@ -20,21 +20,21 @@ bool isSpecial(const std::string &s) {
         std::cout << "double: impossible" << std::endl;
         return(true);
     }
-    if (s == "nan" || s == "nanf") {
+    if (s == "nan" || s == "nanf") { // not a number (ex: 0/0)
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
         std::cout << "float: nanf" << std::endl;
         std::cout << "double: nan" << std::endl;
         return(true);
     }
-    if (s == "+inf" || s == "+inff" || s == "inff") {
+    if (s == "+inf" || s == "inf" || s == "+inff" || s == "inff") { // infini postif
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
         std::cout << "float: +inff" << std::endl;
         std::cout << "double: +inf" << std::endl;
         return(true);
     }
-    if (s == "-inf" || s == "-inff") {
+    if (s == "-inf" || s == "-inff") { // infini négatif
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
         std::cout << "float: -inff" << std::endl;
@@ -47,7 +47,7 @@ bool isSpecial(const std::string &s) {
 bool isChar(const std::string &s) {
     if (s.length() == 1 && !std::isdigit(s[0]))
         return (true);
-    return (false);    
+    return (false);
 }
 
 void toChar(const std::string &s) {
@@ -63,15 +63,16 @@ void toChar(const std::string &s) {
 
 bool isInt(const std::string &s) {
     int i = 0;
-    if (s[0] == '+' || s[0] == '-')
+    if (s[0] == '+' || s[0] == '-') {
+        if (s.length() == 1) // juste signe seul, ex: "+"
+            return false;
         i = 1;
+    }
     int len = s.length();
     for (; i < len; i++) {
         if (!std::isdigit(s[i]))
             return (false);
     }
-    if (len == 1 && !std::isdigit(s[0]))
-        return (false);
     return (true);
 }
 
