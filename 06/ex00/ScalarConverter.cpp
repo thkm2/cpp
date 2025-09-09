@@ -150,7 +150,7 @@ void toFloat(const std::string &s) {
 	if (value == static_cast<long>(value))
     	std::cout << std::fixed << std::setprecision(1);
     std::cout << "float: " << static_cast<float>(value) << "f" << std::endl;
-    std::cout << "double: " << static_cast<double>(value) << std::endl;
+    std::cout << "double: " << value << std::endl;
 }
 
 bool isDouble(const std::string &s) {
@@ -188,13 +188,14 @@ void toDouble(const std::string &s) {
         std::cout << "int: " << static_cast<int>(value) << std::endl;
     else
         std::cout << "int: impossible" << std::endl;
+	if (value == static_cast<long>(value))
+    	std::cout << std::fixed << std::setprecision(1);
     if (value >= -std::numeric_limits<float>::max() && value <= std::numeric_limits<float>::max()) {
-        //std::cout << std::fixed << std::setprecision(1);
         std::cout << "float: " << static_cast<float>(value) << "f" << std::endl;
     }
     else
         std::cout << "float: impossible" << std::endl;
-    std::cout << "double: " << static_cast<double>(value) << std::endl;
+    std::cout << "double: " << value << std::endl;
 }
 
 void ScalarConverter::convert(const std::string &s) {
