@@ -127,7 +127,7 @@ bool isFloat(const std::string &s) {
 void toFloat(const std::string &s) {
     std::string str = s.substr(0, s.length() - 1);
     double value = std::atof(str.c_str());
-    if (value < -std::numeric_limits<float>::max() || value > std::numeric_limits<float>::max()) {
+    if (value < -std::numeric_limits<float>::max() || value > std::numeric_limits<float>::max()) { // -max() car min = plus petit positif pour float
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
         std::cout << "float: impossible" << std::endl;
@@ -147,7 +147,8 @@ void toFloat(const std::string &s) {
         std::cout << "int: " << static_cast<int>(value) << std::endl;
     else
         std::cout << "int: impossible" << std::endl;
-    std::cout << std::fixed << std::setprecision(1);
+	if (value == static_cast<long>(value))
+    	std::cout << std::fixed << std::setprecision(1);
     std::cout << "float: " << static_cast<float>(value) << "f" << std::endl;
     std::cout << "double: " << static_cast<double>(value) << std::endl;
 }
