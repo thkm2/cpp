@@ -20,5 +20,6 @@ un entier non signé assez grand pour contenir n'importe quelle adresse
 
 
 
-static_cast = conversion logique et sûre → refuse pointeur <-> entier car ça n’a pas de sens en tant que valeur.
-reinterpret_cast = conversion binaire brute → autorise pointeur <-> entier, mais à toi de ne pas faire n’importe quoi.
+static_cast = conversion logique et sûre connue à la compilation (ex: double → int).
+reinterpret_cast = réinterprétation brute des bits sans vérification (ex: pointeur ↔ entier).
+dynamic_cast = conversion polymorphe vérifiée à l’exécution (ex: Base* → Derived*).
