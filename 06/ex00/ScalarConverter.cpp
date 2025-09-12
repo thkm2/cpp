@@ -145,8 +145,9 @@ void toFloat(const std::string &s) {
         std::cout << "char: impossible" << std::endl;
     if (value >= std::numeric_limits<int>::min() && value <= std::numeric_limits<int>::max() && value == static_cast<long>(value))
         std::cout << "int: " << static_cast<int>(value) << std::endl;
-    else
+    else {
         std::cout << "int: impossible" << std::endl;
+	}
 	if (value == static_cast<long>(value))
     	std::cout << std::fixed << std::setprecision(1);
     std::cout << "float: " << static_cast<float>(value) << "f" << std::endl;
@@ -186,8 +187,9 @@ void toDouble(const std::string &s) {
         std::cout << "char: impossible" << std::endl;
     if (value >= std::numeric_limits<int>::min() && value <= std::numeric_limits<int>::max() && value == static_cast<long>(value))
         std::cout << "int: " << static_cast<int>(value) << std::endl;
-    else
+    else {
         std::cout << "int: impossible" << std::endl;
+	}
 	if (value == static_cast<long>(value))
     	std::cout << std::fixed << std::setprecision(1);
     if (value >= -std::numeric_limits<float>::max() && value <= std::numeric_limits<float>::max()) {
