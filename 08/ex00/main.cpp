@@ -1,7 +1,4 @@
 #include "easyfind.hpp"
-#include <vector>
-#include <iostream>
-#include <list>
 
 int main() {
 	std::vector<int> v;

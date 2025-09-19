@@ -2,6 +2,9 @@
 #define EASYFIND_HPP
 
 #include <algorithm> // find
+#include <vector>
+#include <iostream>
+#include <list>
 
 template <typename T>
 typename T::iterator easyfind(T &container, int needle) {
