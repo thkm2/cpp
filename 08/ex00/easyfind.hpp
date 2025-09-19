@@ -1,0 +1,18 @@
+#ifndef EASYFIND_H
+#define EASYFIND_H
+
+#include <algorithm> // find
+
+template <typename T>
+typename T::iterator easyfind(T &container, int needle) {
+	typename T::iterator it = std::find(container.begin(), container.end(), needle);
+	return it; // .end() si pas trouvé
+}
+
+template <typename T>
+typename T::const_iterator easyfind(const T &container, int needle) {
+	typename T::const_iterator it = std::find(container.begin(), container.end(), needle);
+	return it; // pareil
+}
+
+#endif
